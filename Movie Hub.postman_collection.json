@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "a0618f17-a9c9-4cb4-9c82-f85cfd5a014c",
+		"name": "Movie Hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7110933"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sachi Bro\",\r\n    \"password\": \"Sachith@1996\",\r\n    \"repeatPassword\": \"Sachith@1996\",\r\n    \"email\": \"sachith.vidu@yahoo.com\",\r\n    \"fullName\": \"Sachith Ariyathilaka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sachi Bro\",\r\n    \"password\": \"Sachith@1996\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find User By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhY2hpdGgudmlkdUB5YWhvby5jb20iLCJpZCI6NywiaWF0IjoxNjc2NTcyMTEyLCJleHAiOjExNjc2NTcyMTEyfQ.9RU-v9Zjf6pOAT9p66Ec4Xd609VQmOxJdRkPiIyqPXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/findById/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"findById",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Popular Movies Data List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhY2hpdGgudmlkdUB5YWhvby5jb20iLCJpZCI6NywiaWF0IjoxNjc2NTcyMTEyLCJleHAiOjExNjc2NTcyMTEyfQ.9RU-v9Zjf6pOAT9p66Ec4Xd609VQmOxJdRkPiIyqPXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movie/popular/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"popular",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Upcoming Movies Data List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhY2hpdGgudmlkdUB5YWhvby5jb20iLCJpZCI6NywiaWF0IjoxNjc2NTcyMTEyLCJleHAiOjExNjc2NTcyMTEyfQ.9RU-v9Zjf6pOAT9p66Ec4Xd609VQmOxJdRkPiIyqPXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movie/upcoming/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"upcoming",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Now Playing Movies Data List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhY2hpdGgudmlkdUB5YWhvby5jb20iLCJpZCI6NywiaWF0IjoxNjc2NTcyMTEyLCJleHAiOjExNjc2NTcyMTEyfQ.9RU-v9Zjf6pOAT9p66Ec4Xd609VQmOxJdRkPiIyqPXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movie/now_playing/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"now_playing",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top Rated Movies Data List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhY2hpdGgudmlkdUB5YWhvby5jb20iLCJpZCI6NywiaWF0IjoxNjc2NTcyMTEyLCJleHAiOjExNjc2NTcyMTEyfQ.9RU-v9Zjf6pOAT9p66Ec4Xd609VQmOxJdRkPiIyqPXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movie/top_rated/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"top_rated",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

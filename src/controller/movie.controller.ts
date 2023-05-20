@@ -1,7 +1,8 @@
-import { Controller, Get, Logger, Param } from '@nestjs/common';
+import {Controller, Get, Logger, Param, UseGuards} from '@nestjs/common';
 import { MovieService } from '../service/movie.service';
 import { Observable } from 'rxjs';
 import { APIResponse } from '../dto/response/APIResponse';
+import {JwtAuthGuard} from "../config/jwt-auth-guard";
 
 @Controller('api/movie/')
 export class MovieController {
@@ -9,6 +10,7 @@ export class MovieController {
 
   private readonly logger = new Logger(MovieController.name);
 
+  @UseGuards(JwtAuthGuard)
   @Get(':category/:page')
   getMovieDataList(
     @Param('category') category: string,
