@@ -1,5 +1,5 @@
 # Movie Hub Backend
-Nest JS backend rest application using MySQL &amp; The Movie DB (TMDB) API  
+Nest JS backend rest application using MySQL &amp; The Movie DB (TMDB) API.
 
 * ### Technologies
   * Nest JS (Node JS)
